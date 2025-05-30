@@ -1,0 +1,781 @@
+{
+	"info": {
+		"_postman_id": "5fdae4c4-c420-4c3a-a5d1-e60c8a32c2da",
+		"name": "app-lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43573624"
+	},
+	"item": [
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "getUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"username\": \"lala\",\r\n            \"password\": \"1234\",\r\n            \"nombres\": \"LALA\",\r\n            \"apellidos\": \"LALA\",\r\n            \"correo\": \"lala@test.com\",\r\n            \"rol\": {\r\n                \"id\": 1,\r\n                \"descripcion\": \"ADMINISTRADOR\"\r\n            }\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"username\": \"jcbodoque\",\r\n            \"password\": \"12345\",\r\n            \"nombres\": \"JUAN CARLOS\",\r\n            \"apellidos\": \"BODOQUE\",\r\n            \"correo\": \"jcbodoque@test.com\",\r\n            \"rol\": {\r\n                \"id\": 1,\r\n                \"descripcion\": \"ADMINISTRADOR\"\r\n            }\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoginController",
+			"item": [
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "usuario",
+									"value": "jperez",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarreraController",
+			"item": [
+				{
+					"name": "getCarreras",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carreras/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carreras",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMascota",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"edad\": 100.0,\r\n            \"raza\": \"Dinosaurio\",\r\n            \"nombre\": \"Dino\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mascotas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mascotas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateMascota",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"edad\": 2.0,\r\n            \"raza\": \"Canino\",\r\n            \"nombre\": \"Choapino\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mascotas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mascotas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMascota",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/mascotas/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mascotas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostulacionController",
+			"item": [
+				{
+					"name": "createPostulacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"carrera_id\": 1,\r\n    \"postulante_id\": 1,\r\n    \"ano_ingreso\": \"2022\",\r\n    \"beneficios\": [\"gratuidad\",\"bequita\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulacionesByFacultad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/facultad?nombre_facultad=ingenieria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								"facultad"
+							],
+							"query": [
+								{
+									"key": "nombre_facultad",
+									"value": "ingenieria"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulacionesByCarrera",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/carrera?nombre_carrera=biomedica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								"carrera"
+							],
+							"query": [
+								{
+									"key": "nombre_carrera",
+									"value": "biomedica"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulacionesByPostulanteId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/carrera?nombre_carrera=biomedica",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								"carrera"
+							],
+							"query": [
+								{
+									"key": "nombre_carrera",
+									"value": "biomedica"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePostulacionById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePostulacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ano_ingreso\": \"2004\",\r\n    \"beneficios\": [\"Beca Excelencia Académica\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulaciones/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulaciones",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PostulanteController",
+			"item": [
+				{
+					"name": "getPostulantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulantes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulanteById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostulantesByRut",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulantes/rut?rut=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"rut"
+							],
+							"query": [
+								{
+									"key": "rut",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBeneficiosDePostulanteById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulantes/beneficios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"beneficios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postPostulante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuarioId\": 4,\r\n    \"nombre\": \"SANJI VINKSMOKE\",\r\n    \"rut\": \"12.345.678-9\",\r\n    \"carrera\": 1,\r\n    \"direccion\": \"P. Sherman calle wallaby 42, sydney\",\r\n    \"nem\": 850.5,\r\n    \"ranking\": 950.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulantes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asignarBeneficioByIdPostulanteAndIdBeneficio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulantes/1/beneficios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"1",
+								"beneficios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePostulante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"SANJI VINKSMOKE Actualizado\",\r\n    \"rut\": \"12.345.678-9\",\r\n    \"carrera\": \"Ingeniería en ejecución Informática\",\r\n    \"direccion\": \"P. Sherman calle wallaby 42, sydney\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePostulante",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/postulantes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "quitarBeneficioByIdPostulanteAndIdBeneficio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/postulantes/1/beneficios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"postulantes",
+								"1",
+								"beneficios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BeneficioController",
+			"item": [
+				{
+					"name": "createBeneficio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"bequita\",\n    \"codigo\": 223.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/beneficios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beneficios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBeneficios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/beneficios/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beneficios",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBeneficio",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/beneficios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beneficios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBeneficio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Beneficio de Salud\",\n    \"codigo\": 423.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/beneficios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"beneficios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
