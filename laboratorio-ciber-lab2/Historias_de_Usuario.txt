@@ -1,0 +1,23 @@
+Crear beneficio
+Como administrador de beneficios estudiantiles, quiero crear un beneficio con sus respectivos datos, para que los postulantes puedan acceder a ayudas al momento de postular.
+
+Listar beneficios por nombre
+Como administrador de beneficios estudiantiles, quiero listar los beneficios filtrando por su nombre, para encontrar rápidamente aquellos que necesito gestionar o consultar.
+
+Listar postulantes por RUT
+Como administrador de beneficios estudiantiles, quiero listar los postulantes usando su RUT, para identificar rápidamente a un postulante en el sistema.
+
+Ver postulante por ID
+Como administrador de beneficios estudiantiles, quiero visualizar el detalle de un postulante dado su ID, para revisar su información personal y académica completa.
+
+Asignar/desasignar beneficio a postulante
+Como administrador de beneficios estudiantiles, quiero asignar o quitar un beneficio a un postulante usando su ID, para mantener actualizada la información sobre las ayudas que recibe.
+
+Crear postulación
+Como postulante, quiero crear una postulación indicando la carrera, el año de ingreso y los beneficios, para formalizar mi solicitud de ingreso a la universidad.
+
+Listar postulaciones por ID de postulante, carrera o facultad
+Como administrador de beneficios estudiantiles, quiero listar las postulaciones filtradas por ID de postulante, carrera o facultad, para gestionar eficientemente el proceso de admisión.
+
+Modificar postulante
+Como postulante, quiero modificar mis datos personales registrados, para asegurarme de que la información en el sistema esté actualizada y correcta.
